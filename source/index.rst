@@ -3,20 +3,26 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to za-docs's documentation!
-===================================
+Dokumentation zum Lehrer-Server an der Universität Karlsruhe
+============================================================
 
-Contents:
+Willkommen zur Dokumentation zum Lehrer-Server.
+Hier finden Sie
 
 .. toctree::
    :maxdepth: 2
 
+   benutzerkonto
+   email
+   webservice
 
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. 
+  Index
+  ==================
+  
+  * :ref:`genindex`
+  * :ref:`modindex`
+  * :ref:`search`
 
