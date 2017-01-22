@@ -10,13 +10,11 @@ Willkommen zur Dokumentation zum Lehrer-Server.
 Hier finden Sie
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
-   benutzerkonto
-   email
-   webservice
-
-
+   benutzerkonto/index
+   email/index
+   webservice/index
 
 .. 
   Index

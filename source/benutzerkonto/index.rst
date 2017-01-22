@@ -14,5 +14,5 @@ Folgende Anleitungen finden Sie hier:
    installation
    login
    passwortaendern
-   donsanddonts
+   dosanddonts
 
