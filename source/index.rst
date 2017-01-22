@@ -3,14 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Dokumentation zum Lehrer-Server an der Universität Karlsruhe
-============================================================
+Dokumentation zum Lehrer-Server
+===============================
 
-Willkommen zur Dokumentation zum Lehrer-Server.
-Hier finden Sie
+Willkommen zur Dokumentation zum `Lehrer-Server an der Universität
+Karlsruhe <http://www.lehrer.uni-karlsruhe.de>`_ .  Hier finden Sie
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    benutzerkonto/index
    email/index

@@ -1,6 +1,6 @@
-====================================
- Anleitungen zur Nutzung des Kontos
-====================================
+=============================================
+ Nutzung des Kontos: Login und Dateitransfer
+=============================================
 
 Sie haben bereits ein Konto? Dann lesen Sie hier weiter.  Falls nicht,
 besuchen Sie die Homepage http://www.lehrer.uni-karlsruhe.de und
@@ -15,4 +15,5 @@ Folgende Anleitungen finden Sie hier:
    login
    passwortaendern
    dosanddonts
+   filetransfer
 
