@@ -1,7 +1,5 @@
-==================
- Wichtigste Daten
-==================
-
-Momentan noch nicht in dieser Dokumentation, konsultieren Sie:
+===========================
+ Daten zur lokalen Nutzung
+===========================
 
 http://www.lehrer.uni-karlsruhe.de/umstellung/

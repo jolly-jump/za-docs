@@ -1,3 +1,5 @@
+.. _label-passwort-aendern:
+
 Wie man sein Passwort ändert
 ============================
 
