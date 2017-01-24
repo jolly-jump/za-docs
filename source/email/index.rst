@@ -7,8 +7,8 @@ Folgende Anleitungen finden Sie hier:
 .. toctree::
    :maxdepth: 2
 
-   information
    webmail
+   information
    thunderbird
    thunderbird-send
 
