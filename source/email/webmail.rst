@@ -17,11 +17,22 @@ Standardmäßig sehen Sie Ihren Posteingang.
 .. figure:: media/roundcube-defaultview.png
 
 Die Bedienung eines Webmailers sollte intuitiv sein und wird hier
-weiter nicht beschrieben. Es bietet sich jedoch an, Ihre kryptische
-E-Mail-Adresse mit Ihrem Alias einzurichten.
+weiter nicht beschrieben. 
 
-Öffnen Sie unter *Einstellungen* -> *Identitäten* und erstellen Sie
-mit Hilfe des "+"-Knopfes eine neue Identität, die als
+.. note::
+
+   **Standardeinstellungen für neue Benutzer**
+
+   - Der Papierkorb wird standardmäßig beim Abmelden geleert.
+
+
+Vorname.Nachname E-Mail-Adresse
+===============================
+
+Es bietet sich an, zusätzlich zu Ihrer kryptischen E-Mail-Adresse
+``zaxxx@lehrer.uni-karlsruhe.de`` die Alias-E-Mail-Adresse zu
+verwenden. Öffnen Sie *Einstellungen* -> *Identitäten* und erstellen
+Sie mit Hilfe des "+"-Knopfes eine neue Identität, die als
 ``Vorname.Nachname@lehrer.uni-karlsruhe.de`` angelegt wurde.
 
 .. figure:: media/roundcube-identity-pretty.png

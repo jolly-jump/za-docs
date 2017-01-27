@@ -39,3 +39,7 @@ SMTP-Server:
 
    Bitte sorgen Sie unbedingt dafür, dass Ihr E-Mail-Konto nicht
    überfüllt wird. Löschen Sie E-Mails und leeren Sie den Papierkorb.
+
+   Die Standardeinstellung für neue Nutzer, die sich im Webmailer
+   "Roundcube" anmelden ist, den Papierkorb bei Verlassen des
+   Webmailers zu leeren.
