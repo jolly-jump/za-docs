@@ -6,7 +6,6 @@ Einloggen) und meist auch ein SFTP-Programm (zum Datentransfer). Für
 die drei wichtigsten Desktop-Betriebssysteme gibt es hier Links zum
 Download von Programmen.
 
-
 Linux
 -----
 

@@ -6,18 +6,16 @@ Das E-Mail-Konto lässt sich am einfachsten über den Browser nutzen:
 
 https://webmail.lehrer.uni-karlsruhe.de
 
-Ändern Sie vor der ersten Nutzung bitte Ihr Passwort: :ref:`label-passwort-aendern`.
-
-Melden Sie sich im Browser mit Ihrem Benutzernamen und Ihrem Passwort an:
+Ändern Sie vor der ersten Nutzung bitte Ihr Passwort:
+:ref:`label-passwort-aendern`.  Melden Sie sich im Browser mit Ihrem
+Benutzernamen und Ihrem Passwort an, auf mobilen Endgeräten kann die
+mobile Ansicht angezeigt werden.
 
 .. figure:: media/roundcube-login.png
 
 Standardmäßig sehen Sie Ihren Posteingang.
 
 .. figure:: media/roundcube-defaultview.png
-
-Die Bedienung eines Webmailers sollte intuitiv sein und wird hier
-weiter nicht beschrieben. 
 
 .. note::
 
@@ -48,3 +46,18 @@ Benutzerkonto eines Benutzers senden indem Sie dessen E-Mail-Adresse
 Sobald Sie ein Adressbuch anlegen und befüllen (oder Daten
 importieren), können Sie auch im Feld des Empfängers mit einigen
 Anfangsbuchstaben Vorschläge auswählen.
+
+Mobile Ansicht
+==============
+
+Sollten Sie ein mobiles Endgerät verwenden, dann dies die Software in
+der Regel erkennen und Ihnen eine mobile Ansicht zur Verfügung
+stellen.  Ist dies nicht der Fall, können Sie nach der Anmeldung oben
+links auf "Mobile view" klicken und erhalten ab sofort die mobile Ansicht.
+
+.. figure:: media/roundcube-switch-to-mobile.png
+
+Die mobile Ansicht erlaubt ebenfalls alle Einstellungen zu ändern.
+
+.. figure:: media/roundcube-defaultview-mobile.png
+
