@@ -1,3 +1,6 @@
+
+.. _email-thunderbird-label:
+
 ==================================
  Empfange E-Mails mit Thunderbird
 ==================================
@@ -43,8 +46,8 @@ SMTP-Postausgangsservers auf ``localhost`` wird offensichtlich, wenn
 Sie im nächsten Schritt auch das Senden von E-Mails einrichten
 möchten.
 
-In jedem Fall wird die Wahl eines nicht-verschlüsselten Servers
-("localhost") hat eine Sicherheitswarnung zur Folge, deren Ausnahme
+In jedem Fall hat die Wahl eines nicht-verschlüsselten Servers
+("localhost") eine Sicherheitswarnung zur Folge, deren Ausnahme
 sie ausnahmsweise akzeptieren können, weil Sie selbst für die
 Verschlüsselung sorgen werden.
 
