@@ -8,14 +8,15 @@ Dokumentation zum Lehrer-Server
 
 Willkommen zur Dokumentation zum `Lehrer-Server an der Universität
 Karlsruhe <http://www.lehrer.uni-karlsruhe.de>`_ .  Hier finden Sie
+Dokumentationen zu:
 
 .. toctree::
    :maxdepth: 2
 
-   benutzerkonto/index
    email/index
-   webservice/index
 
+..   webservice/index
+..   benutzerkonto/index
 .. 
   Index
   ==================
