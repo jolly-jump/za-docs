@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Anmelden am Lehrer-Server &mdash; Lehrer-Server Dokumentation Version 2.0 Dokumentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Lehrer-Server Dokumentation Version 2.0 Dokumentation" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Lehrer-Server Dokumentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../email/index.html">Nutzung des E-Mail-Kontos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Lehrer-Server Dokumentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Anmelden am Lehrer-Server</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="anmelden-am-lehrer-server">
+<h1>Anmelden am Lehrer-Server<a class="headerlink" href="#anmelden-am-lehrer-server" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="vorab-fingerabdrucke-des-lehrer-servers">
+<h2>Vorab: Fingerabdrücke des Lehrer-Servers<a class="headerlink" href="#vorab-fingerabdrucke-des-lehrer-servers" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Sie erhalten bei der ersten Sitzung die Rückmeldung, dass Sie den
+Rechner <code class="docutils literal"><span class="pre">lehrer.lehrer.uni-karlsruhe.de</span></code> zum ersten Mal besuchen und
+werden gefragt, ob Sie dessen Identifikation mit einem bestimmten
+Fingerabdruck in Zukunft immer vertrauen wollen.</p>
+<p>Die Fingerabdrücke des Lehrer-Servers sind</p>
+<div class="code console highlight-python"><div class="highlight"><pre>MD5:
+1024 e9:fa:cb:1f:5c:75:9f:fc:a4:c7:b4:d9:11:29:b3:6e (DSA)
+256  bd:fd:40:54:c1:4c:76:ae:d3:e1:19:b5:13:72:24:40 (ECDSA)
+256  cd:ae:1b:18:87:e6:d4:dc:c1:f2:6c:5e:d5:79:e9:25 (ED25519)
+2048 da:c7:c4:c9:30:39:fb:19:08:4f:81:71:7e:d7:ae:98 (RSA)
+
+SHA256:
+1024 xCaUPK/kVBsnV/qJ0riPBaIllQcSq2LIiVEqhL7acMA (DSA)
+256  oyFE3aI9/KPj37dih9ErDir0sT0HmF2TbJqNq72kGbk (ECDSA)
+256  W2PTQkaHdAwoOIVT6Si3SCxBoWhWZrQdyJiDHqSNyUE (ED25519)
+2048 VTHrv1EaV5MWlKlJUNjV89R9waDJ2bTJk7uselegTlY (RSA)
+</pre></div>
+</div>
+<p>Wird einer der angezeigten Fingerabdrücke zurückgemeldet, können Sie
+sicher sein, sich tatsächlich mit dem Lehrer-Server zu verbinden.</p>
+</div>
+<div class="section" id="unter-windows-verbinden">
+<h2>Unter Windows verbinden<a class="headerlink" href="#unter-windows-verbinden" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Öffnen Sie putty</p>
+<div class="figure">
+<img alt="../_images/putty-start.png" src="../_images/putty-start.png" />
+</div>
+<p>Geben Sie im Feld <em>Host Name (or IP address)</em> den Hostnamen des
+Lehrer-Servers ein, wie im Bild angezeigt:
+<code class="docutils literal"><span class="pre">lehrer.lehrer.uni-karlsruhe.de</span></code>. Die Verbindung muss per SSH auf
+Port 22 erfolgen und ist standardmäßig so eingestellt. Klicken Sie auf
+<em>Open</em>.</p>
+<p>Verifizieren Sie bei der ersten Sitzung, ob der Lehrer-Server eines
+der obig genannten Fingerabdrücke besitzt und bestätigen Sie mit &#8220;Ja&#8221;.</p>
+<div class="figure">
+<img alt="../_images/putty-keyverification.png" src="../_images/putty-keyverification.png" />
+</div>
+<p>Geben Sie jetzt im Terminal-Fenster Ihren Benutzernamen ein <code class="docutils literal"><span class="pre">za....</span></code>.</p>
+<div class="figure">
+<img alt="../_images/putty-login-as.png" src="../_images/putty-login-as.png" />
+</div>
+<p>Es wird dann das Passwort abgefragt.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Achtung</p>
+<p class="last">Beachten Sie: Die Eingabe des Passworts wird Ihnen nicht
+zurückgemeldet. Sie sehen keine &#8220;*&#8221; oder das Passwort selbst,
+während Sie es eingeben.</p>
+</div>
+<div class="figure">
+<img alt="../_images/putty-login.png" src="../_images/putty-login.png" />
+</div>
+<p>Im Beispiel wurde das Passwort zunächst falsch eingegeben, dann
+korrekt. Sie sind nun drin, wenn das Prompt</p>
+<div class="code console highlight-python"><div class="highlight"><pre>za....@lehrer:~$
+</pre></div>
+</div>
+<p>erscheint.</p>
+</div>
+<div class="section" id="unter-linux-mac-os">
+<h2>Unter Linux/Mac OS<a class="headerlink" href="#unter-linux-mac-os" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Öffnen Sie ein Terminal, verbinden Sie sich mit dem Lehrerserver mit
+folgendem Befehl <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">lehrer.lehrer.uni-karlsruhe.de</span> <span class="pre">-l</span> <span class="pre">za3966</span></code>,
+ersetzen Sie dabei <code class="docutils literal"><span class="pre">za3966</span></code> durch den Benutzernamen Ihres Kontos.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">~$ ssh lehrer.lehrer.uni-karlsruhe.de -l za3966</span>
+<span class="go">The authenticity of host &#39;lehrer.lehrer.uni-karlsruhe.de (129.13.250.22)&#39; can&#39;t be established.</span>
+<span class="go">ECDSA key fingerprint is SHA256:oyFE3aI9/KPj37dih9ErDir0sT0HmF2TbJqNq72kGbk.</span>
+<span class="go">Are you sure you want to continue connecting (yes/no)? yes</span>
+<span class="go">Warning: Permanently added &#39;lehrer.lehrer.uni-karlsruhe.de&#39; (ECDSA) to the list of known hosts.</span>
+</pre></div>
+</div>
+<p>Bei erstmaliger Anmeldung müssen Sie hier mit <code class="docutils literal"><span class="pre">yes</span></code> antworten. Es wird dann das Passwort abgefragt.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Achtung</p>
+<p class="last">Beachten Sie: Die Eingabe des Passworts wird Ihnen nicht
+zurückgemeldet. Sie sehen keine &#8220;*&#8221; oder das Passwort selbst,
+während Sie es eingeben.</p>
+</div>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">za3966@lehrer.lehrer.uni-karlsruhe.de&#39;s password:</span>
+<span class="go">Welcome to Ubuntu 16.04.1 LTS (GNU/Linux 4.4.0-59-generic x86_64)</span>
+
+<span class="go"> * Documentation:  https://help.ubuntu.com</span>
+<span class="go"> * Management:     https://landscape.canonical.com</span>
+<span class="go"> * Support:        https://ubuntu.com/advantage</span>
+
+<span class="go">0 Software-Pakete können aktualisiert werden.</span>
+<span class="go">0 Aktualisierungen sind Sicherheitsaktualisierungen.</span>
+
+
+<span class="go">You have mail.</span>
+<span class="go">Last login: Sun Jan 22 21:01:20 2017 from 95.114.99.20</span>
+<span class="gp">za3966@lehrer:~$</span>
+</pre></div>
+</div>
+<p>Sie sind nun drin, wenn das Prompt</p>
+<div class="code console highlight-python"><div class="highlight"><pre>za....@lehrer:~$
+</pre></div>
+</div>
+<p>erscheint.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Tobias Küchel, Roland Bernert.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'Version 2.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

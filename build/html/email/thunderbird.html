@@ -1,0 +1,233 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Empfange E-Mails mit Thunderbird &mdash; Lehrer-Server Dokumentation Version 2.0 Dokumentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Lehrer-Server Dokumentation Version 2.0 Dokumentation" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Lehrer-Server Dokumentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Nutzung des E-Mail-Kontos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Lehrer-Server Dokumentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Empfange E-Mails mit Thunderbird</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="empfange-e-mails-mit-thunderbird">
+<span id="email-thunderbird-label"></span><h1>Empfange E-Mails mit Thunderbird<a class="headerlink" href="#empfange-e-mails-mit-thunderbird" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Sie möchten Ihre E-Mails mit Hilfe eines zu Hause/an der Schule
+installierten E-Mailprogramms empfangen. Das geht. Senden geht
+zunächst nicht.</p>
+<p>Am Beispiel von <a class="reference external" href="https://www.mozilla.org/de/thunderbird/">Mozilla Thunderbird</a> wird nachstehend gezeigt,
+wie Sie das Programm konfigurieren müssen. Laden Sie das Programm
+herunter und installieren Sie es.</p>
+<p>Falls beim ersten Starten das Dialogfenster &#8220;Willkommen&#8221; erscheint,
+wählen Sie &#8220;Überspringen und meine existierende E-Mail-Adresse
+verwenden&#8221;.</p>
+<div class="figure">
+<img alt="../_images/thunderbird-firststart.png" src="../_images/thunderbird-firststart.png" />
+</div>
+<p>Ansonsten wählen Sie im Menü unter <em>Datei</em> -&gt; <em>Neu</em> bzw. unter <em>Neue
+Nachricht</em> unter dem Untermenü -&gt; <em>Existierendes E-Mail-Konto...</em></p>
+<div class="figure">
+<img alt="../_images/thunderbird-newaccount.png" src="../_images/thunderbird-newaccount.png" />
+</div>
+<p>Anschließend wird ein neues Konto eingerichtet, dabei geben Sie Name,
+E-Mail-Adresse und Passwort ein. Ersetzen Sie dabei <code class="docutils literal"><span class="pre">za3966</span></code> durch
+Ihr eigenes Benutzerkonto. Wenn Sie das Passwort speichern, sollten
+Sie als Sicherheitsmaßnahme wenigstens <a class="reference external" href="https://support.mozilla.org/de/kb/master-passwort">in Thunderbird ein
+Master-Passwort vergeben</a>.</p>
+<div class="figure">
+<img alt="../_images/thunderbird-newaccount-1.png" src="../_images/thunderbird-newaccount-1.png" />
+</div>
+<p>Nachdem Thunderbird einige Server-Einstellungen (unter Umständen
+vergeblich) versucht automatisch vorzunehmen, geben Sie bitte folgende
+Daten von Hand ein:</p>
+<div class="figure">
+<img alt="../_images/thunderbird-newaccount-2.png" src="../_images/thunderbird-newaccount-2.png" />
+</div>
+<p>Statt &#8220;IMAP&#8221; können Sie als Posteingangsserver auch POP3 wählen. Dann
+wird der Port automatisch auf <code class="docutils literal"><span class="pre">995</span></code> umgestellt.  Die Änderung des
+SMTP-Postausgangsservers auf <code class="docutils literal"><span class="pre">localhost</span></code> wird offensichtlich, wenn
+Sie im nächsten Schritt auch das Senden von E-Mails einrichten
+möchten.</p>
+<p>In jedem Fall hat die Wahl eines nicht-verschlüsselten Servers
+(&#8220;localhost&#8221;) eine Sicherheitswarnung zur Folge, deren Ausnahme
+sie ausnahmsweise akzeptieren können, weil Sie selbst für die
+Verschlüsselung sorgen werden.</p>
+<div class="figure">
+<img alt="../_images/thunderbird-newaccount-3.png" src="../_images/thunderbird-newaccount-3.png" />
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Tobias Küchel, Roland Bernert.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'Version 2.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

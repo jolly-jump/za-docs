@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sende E-Mails mit Thunderbird und SSH-Tunnel &mdash; Lehrer-Server Dokumentation Version 2.0 Dokumentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Lehrer-Server Dokumentation Version 2.0 Dokumentation" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Lehrer-Server Dokumentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Nutzung des E-Mail-Kontos</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Lehrer-Server Dokumentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Sende E-Mails mit Thunderbird und SSH-Tunnel</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sende-e-mails-mit-thunderbird-und-ssh-tunnel">
+<h1>Sende E-Mails mit Thunderbird und SSH-Tunnel<a class="headerlink" href="#sende-e-mails-mit-thunderbird-und-ssh-tunnel" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Sie haben bereits ein Konto in Thunderbird eingerichtet, das per
+POP/IMAP die E-Mails empfängt? Dann werden hier die nötigen Schritte
+gezeigt, um auch das Senden von E-Mails über Thunderbird einzurichten.</p>
+<p>Äquivalent funktioniert das natürlich auch über andere
+E-Mail-Programme.</p>
+<p>Installieren Sie zunächst ein SSH-Client-Programm, wie es <a class="reference internal" href="../benutzerkonto/installation.html#benutzerkonto-installation-label"><span>hier</span></a> beschrieben wird.</p>
+<div class="section" id="ssh-tunnel-unter-mac-und-linux">
+<h2>SSH-Tunnel unter MAC und Linux<a class="headerlink" href="#ssh-tunnel-unter-mac-und-linux" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Öffnen Sie ein Terminal und verbinden Sie sich mit dem Lehrer-Server
+mit Hilfe des folgenden Befehls. Beachten Sie die zusätzliche Option
+<code class="docutils literal"><span class="pre">-L</span> <span class="pre">25:localhost:2525</span></code> die den Port 25 ihres Rechners auf den Port
+2525 des Zielrechners (localhost ist dann der Lehrer-Server) tunnelt.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">~$ ssh lehrer.lehrer.uni-karlsruhe.de -l za3966 -L 2525:localhost:25</span>
+<span class="go">Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-62-generic x86_64)</span>
+
+<span class="go"> * Documentation:  https://help.ubuntu.com</span>
+<span class="go"> * Management:     https://landscape.canonical.com</span>
+<span class="go"> * Support:        https://ubuntu.com/advantage</span>
+
+<span class="go">0 Software-Pakete können aktualisiert werden.</span>
+<span class="go">0 Aktualisierungen sind Sicherheitsaktualisierungen.</span>
+
+<span class="go">You have mail.</span>
+<span class="go">Last login: Sun Jan 22 22:29:48 2017 from 95.114.99.20</span>
+<span class="gp">za3966@lehrer:~$</span>
+</pre></div>
+</div>
+<p>Sie sind nun angemeldet.</p>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">Der Tunnel besteht solange Sie angemeldet sind, auch wenn man
+diesen durch keinen weiteren Hinweis sehen kann.</p>
+</div>
+</div>
+<div class="section" id="ssh-tunnel-unter-windows">
+<h2>SSH-Tunnel unter Windows<a class="headerlink" href="#ssh-tunnel-unter-windows" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first">Öffnen Sie putty, geben folgende Daten ein und speichern danach die &#8220;Session&#8221;:</p>
+<div class="figure">
+<img alt="../_images/putty-start1.png" src="../_images/putty-start1.png" />
+</div>
+<dl class="docutils">
+<dt>Host Name:</dt>
+<dd><p class="first last"><code class="docutils literal"><span class="pre">lehrer.lehrer.uni-karlsruhe.de</span></code></p>
+</dd>
+<dt>Connection Type:</dt>
+<dd><p class="first last">SSH</p>
+</dd>
+</dl>
+<p>Der Port wird dadurch automatisch auf <code class="docutils literal"><span class="pre">22</span></code> gestellt.</p>
+<dl class="docutils">
+<dt>Saved Sessions:</dt>
+<dd><p class="first last"><code class="docutils literal"><span class="pre">smtptunnel</span></code> oder einen beliebigen anderen Namen, z.B. <code class="docutils literal"><span class="pre">lehrertunnel</span></code></p>
+</dd>
+</dl>
+</li>
+<li><p class="first">Klicken Sie danach auf &#8220;Save&#8221;.</p>
+</li>
+<li><p class="first">Öffnen Sie nun in der linken Leiste die Auswahl &#8220;Connection&#8221; -&gt; &#8220;SSH&#8221;
+-&gt; &#8220;Tunnels&#8221; und geben diese Daten ein</p>
+<dl class="docutils">
+<dt>Source port:</dt>
+<dd><p class="first last">2525</p>
+</dd>
+<dt>Destination:</dt>
+<dd><p class="first last">localhost:25</p>
+</dd>
+</dl>
+<div class="figure">
+<img alt="../_images/putty-tunnel-localhost.png" src="../_images/putty-tunnel-localhost.png" />
+</div>
+</li>
+<li><p class="first">Klicken Sie danach auf die Schaltfläche &#8220;Add&#8221;, um eine Zeile
+<code class="docutils literal"><span class="pre">L2525</span>&nbsp;&nbsp; <span class="pre">localhost:25</span></code> in der Liste &#8220;Forwarded ports&#8221; in putty zu sehen.</p>
+</li>
+<li><p class="first">Gehen Sie zurück in der linken Leiste auf &#8220;Session&#8221;, klicken
+wieder auf Ihren Sessionnamen, z.B. &#8220;smtptunnel&#8221; und klicken
+nochmals auf &#8220;Save&#8221;. Jetzt ist die Tunnelkonfiguration gespeichert.</p>
+</li>
+<li><p class="first">Öffnen Sie die Verbindung, in dem Sie auf &#8220;Open&#8221; klicken und Sie
+sich mit Ihrem Benutzernamen und Passwort anmelden.</p>
+</li>
+</ol>
+</div></blockquote>
+<div class="figure">
+<img alt="../_images/putty-login1.png" src="../_images/putty-login1.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">Der Tunnel besteht solange Sie angemeldet sind, auch wenn man
+diesen durch keinen weiteren Hinweis sehen kann. Lassen Sie also
+dieses Fenster geöffnet.</p>
+</div>
+</div>
+<div class="section" id="thunderbird-zum-versenden-einrichten">
+<h2>Thunderbird zum Versenden einrichten<a class="headerlink" href="#thunderbird-zum-versenden-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Bei anderen Mailprogrammen funktioniert es analog, Sie müssen die
+Einstellungen nur finden.</p>
+<p>Wenn Sie erstmalige Einrichtung wie <a class="reference internal" href="thunderbird.html#email-thunderbird-label"><span>hier beschrieben</span></a> vorgenommen haben, müssen Sie nichts weiter
+tun, das Versenden von E-Mails wird bei bestehendem Tunnel
+funktionieren.</p>
+<div class="figure">
+<img alt="../_images/thunderbird-preferences.png" src="../_images/thunderbird-preferences.png" />
+</div>
+<p>Andernfalls finden Sie im Menü unter <em>Einstellungen</em> -&gt;
+<em>Konten-Einstellungen</em> die SMTP-Einstellungen unter
+<em>Postausgangs-Server (SMTP)</em> in der linken Leiste.</p>
+<div class="figure">
+<img alt="../_images/thunderbird-smtptunnel.png" src="../_images/thunderbird-smtptunnel.png" />
+</div>
+<p>Ändern Sie hier den bestehenden Eintrag oder erstellen einen neuen mit
+den im Bild angegebenen Werten. Der Eintrag <code class="docutils literal"><span class="pre">localhost</span></code> unter
+<em>Server</em> bedeutet in diesem Fall, dass Sie sich mit ihrem eigenen
+Computer verbinden (der das Versenden über den Tunnel schickt).</p>
+<p>Überprüfen Sie in den Konten-Einstellungen zu Ihrem Konto (hier:
+<a class="reference external" href="mailto:za3966&#37;&#52;&#48;lehrer&#46;uni-karlsruhe&#46;de">za3966<span>&#64;</span>lehrer<span>&#46;</span>uni-karlsruhe<span>&#46;</span>de</a>), ob der entsprechend konfigurierte
+Postausgangs-Server auch ausgewählt ist.</p>
+<div class="figure">
+<img alt="../_images/thunderbird-smtp.png" src="../_images/thunderbird-smtp.png" />
+</div>
+</div>
+<div class="section" id="vorname-nachname-e-mail-adresse-verwenden">
+<h2>Vorname.Nachname E-Mail-Adresse verwenden<a class="headerlink" href="#vorname-nachname-e-mail-adresse-verwenden" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Es bietet sich an, zusätzlich zu Ihrer kryptischen E-Mail-Adresse
+<code class="docutils literal"><span class="pre">zaxxx&#64;lehrer.uni-karlsruhe.de</span></code> die Alias-E-Mail-Adresse zu
+verwenden. Öffnen Sie die Konten-Einstellungen und klicken Sie
+unterhalb der Auswahl des Postausgangs-Servers den Knopf <em>Weitere
+Identitäten</em>.</p>
+<p>Fügen Sie eine neue Identität hinzu und tragen Sie die E-Mail-Adresse
+nach dem Muster <code class="docutils literal"><span class="pre">Vorname.Nachname&#64;lehrer.uni-karlsruhe.de</span></code> hinzu.</p>
+<div class="figure">
+<img alt="../_images/thunderbird-identity-pretty.png" src="../_images/thunderbird-identity-pretty.png" />
+</div>
+<p>Klicken Sie auf <em>Als Standard festlegen</em> um immer mit dieser Identität
+E-Mails zu versenden, die über den Lehrer-Server gehen.  Beim
+Versenden von E-Mails können Sie nun bei jeder E-Mail festlegen, unter
+welcher Identität sie verschicken wollen.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Tobias Küchel, Roland Bernert.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'Version 2.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
