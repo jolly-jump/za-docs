@@ -13,10 +13,11 @@ Dokumentationen zu:
 .. toctree::
    :maxdepth: 2
 
+   benutzerkonto/index
    email/index
 
 ..   webservice/index
-..   benutzerkonto/index
+
 .. 
   Index
   ==================

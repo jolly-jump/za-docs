@@ -30,7 +30,9 @@
   
 
   
-    <link rel="top" title="Lehrer-Server Dokumentation Version 2.0 Dokumentation" href="../index.html"/> 
+    <link rel="top" title="Lehrer-Server Dokumentation Version 2.0 Dokumentation" href="../index.html"/>
+        <link rel="next" title="Nutzung des E-Mail-Kontos" href="../email/index.html"/>
+        <link rel="prev" title="Dokumentation zum Lehrer-Server" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -79,7 +81,13 @@
           
             
             
-                <ul>
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Nutzung des Kontos: Login und Dateitransfer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#passwort-andern">Passwort ändern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#externe-e-mail-adresse-angeben">Externe E-Mail-Adresse angeben.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dateitransfer">Dateitransfer</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../email/index.html">Nutzung des E-Mail-Kontos</a></li>
 </ul>
 
@@ -125,31 +133,54 @@
             
   <div class="section" id="nutzung-des-kontos-login-und-dateitransfer">
 <h1>Nutzung des Kontos: Login und Dateitransfer<a class="headerlink" href="#nutzung-des-kontos-login-und-dateitransfer" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Sie haben bereits ein Konto? Dann lesen Sie hier weiter.  Falls nicht,
-besuchen Sie die Homepage <a class="reference external" href="http://www.lehrer.uni-karlsruhe.de">http://www.lehrer.uni-karlsruhe.de</a> und
-beantragen Sie ein Konto.</p>
 <p>Möchten Sie Ihr Konto löschen lassen? Kontaktieren Sie
 <a class="reference external" href="mailto:tobias&#46;kuechel&#37;&#52;&#48;lehrer&#46;uni-karlsruhe&#46;de">tobias<span>&#46;</span>kuechel<span>&#64;</span>lehrer<span>&#46;</span>uni-karlsruhe<span>&#46;</span>de</a>.</p>
-<p>Folgende Anleitungen finden Sie hier:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Vorbereitung: Installation SSH/SFTP Programme</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#linux">Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#windows">Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#mac-os">Mac OS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#linux-windows-mac-os">Linux, Windows &amp; Mac OS</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="login.html">Anmelden am Lehrer-Server</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="login.html#vorab-fingerabdrucke-des-lehrer-servers">Vorab: Fingerabdrücke des Lehrer-Servers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="login.html#unter-windows-verbinden">Unter Windows verbinden</a></li>
-<li class="toctree-l2"><a class="reference internal" href="login.html#unter-linux-mac-os">Unter Linux/Mac OS</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="passwortaendern.html">Wie man sein Passwort ändert</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dosanddonts.html">Pflichten des Benutzers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="filetransfer.html">Wie man Dateien transferiert</a></li>
-</ul>
+<div class="section" id="passwort-andern">
+<h2>Passwort ändern<a class="headerlink" href="#passwort-andern" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wer sein Passwort noch kennt, kann es hier ändern:</p>
+<p><a class="reference external" href="https://www.lehrer.uni-karlsruhe.de/admin/chpass.pl">https://www.lehrer.uni-karlsruhe.de/admin/chpass.pl</a></p>
+<p>Die folgende Abbildung zeigt ein Beispiel für das Ändern des eigenen
+Passwortes.</p>
+<div class="figure">
+<img alt="../_images/pw-webchpass.png" src="../_images/pw-webchpass.png" />
+</div>
+</div>
+<div class="section" id="externe-e-mail-adresse-angeben">
+<h2>Externe E-Mail-Adresse angeben.<a class="headerlink" href="#externe-e-mail-adresse-angeben" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wie auf der gezeigten Seite dargestellt, kann man hier auch eine
+externe E-Mail-Adresse angeben, die ausschließlich dafür benutzt wird,
+Sie in dringenden Fällen zu kontaktieren und zu informieren.</p>
+</div>
+<div class="section" id="dateitransfer">
+<h2>Dateitransfer<a class="headerlink" href="#dateitransfer" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Der Dateitransfer funktioniert über SFTP. Dafür kann man verschiedene
+Programme verwenden. Ein Standardprogramm ist &#8220;Filezilla&#8221;, welches man
+hier <a class="reference external" href="https://filezilla-project.org/">https://filezilla-project.org/</a> herunterladen kann.</p>
+<p>Der folgende Dialog kann über das Menü &#8220;Datei&#8221; - &#8220;Servermanager&#8221;
+erreicht werden. Fügen Sie einen Server hinzu und konfigurieren Sie
+ihn so:</p>
+<div class="figure">
+<img alt="../_images/filezilla-sftponly.png" src="../_images/filezilla-sftponly.png" />
+</div>
+<p>Bei der allerersten Verbindung mit dem LehrerServer wird der
+Fingerabdruck des öffentlichen Schlüssels angezeigt, den man hier
+vergleichen sollte:</p>
+<div class="figure">
+<img alt="../_images/filezilla-first-ssh-keyok.png" src="../_images/filezilla-first-ssh-keyok.png" />
+</div>
+<p>Im weiteren Verlauf sieht man nun, dass die Lehrerseite in drei
+Verzeichnisse aufgeteilt ist, Home, Mail und public_html.</p>
+<dl class="docutils">
+<dt>public_html</dt>
+<dd>Hier liegen die Homepage-Daten</dd>
+<dt>Mail</dt>
+<dd>Das ist der Ablageort für alle E-Mails auf dem Server</dd>
+<dt>Home</dt>
+<dd>Das ist ein Ablageort für alle anderen Sachen.</dd>
+</dl>
+<div class="figure">
+<img alt="../_images/filezilla-default-files.png" src="../_images/filezilla-default-files.png" />
+</div>
 </div>
 </div>
 
@@ -157,6 +188,15 @@ beantragen Sie ein Konto.</p>
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../email/index.html" class="btn btn-neutral float-right" title="Nutzung des E-Mail-Kontos" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Dokumentation zum Lehrer-Server" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="Lehrer-Server Dokumentation Version 2.0 Dokumentation" href="../index.html"/>
-        <link rel="prev" title="Dokumentation zum Lehrer-Server" href="../index.html"/> 
+        <link rel="prev" title="Nutzung des Kontos: Login und Dateitransfer" href="../benutzerkonto/index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -81,10 +81,15 @@
             
             
                 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../benutzerkonto/index.html">Nutzung des Kontos: Login und Dateitransfer</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">Nutzung des E-Mail-Kontos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#thunderbird-installieren">Thunderbird installieren</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mailkonto-einrichten">Mailkonto einrichten</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#e-mails-versenden">E-Mails versenden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#thunderbird-verwenden">Thunderbird verwenden</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#thunderbird-installieren">Thunderbird installieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mailkonto-einrichten">Mailkonto einrichten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#korrekte-konfiguration">Korrekte Konfiguration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#unter-android-einrichten">Unter Android einrichten</a></li>
 </ul>
 </li>
 </ul>
@@ -135,16 +140,23 @@
 externe Protokolle, das bedeutet, dass Sie ein E-Mail-Programm
 (E-Mail-Client) auf einem eigenen Gerät installieren müssen. Diese
 Programm verbindet sich dann mit dem Lehrer-Server und lädt E-Mails
-herunter.</p>
-<p>Momentan funktioniert nur das Empfangen von E-Mails über IMAP/993 mit
-Hilfe der Zugangsdaten &lt;zaXXX&gt; / &lt;passwort&gt;.</p>
+herunter und sendet darüber auch E-Mails.</p>
 <p>Im Weiteren wird dokumentiert, wie Sie mit Hilfe des Programms
 Thunderbird an Ihre E-Mail-Konto kommen. Das gleiche sollte auch mit
 jedem anderen modernen (auch mobilen) Mail-Client funktionieren. Bei
 Thunderbird ist angenehm, dass er die richtigen Einstellungen
 automatisch findet.</p>
+<p>Für die Experten, die richtigen Einstellungen sind:</p>
+<dl class="docutils">
+<dt>Empfang:</dt>
+<dd>mail.lehrer.uni-karlsruhe.de, Port 993 (imaps), SSL/TLS (nicht StartTLS!), Benutzername: zaXXX, Passwort (unverschlüsselt, PLAIN)</dd>
+<dt>Versand:</dt>
+<dd>smtp.lehrer.uni-karlsruhe.de, Port 465 (smtps+AUTH), SSL/TLS (nicht StartTLS!), Benutzername: zaXXX, Passwort (unverschlüsselt, PLAIN)</dd>
+</dl>
+<div class="section" id="thunderbird-verwenden">
+<h2>Thunderbird verwenden<a class="headerlink" href="#thunderbird-verwenden" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="thunderbird-installieren">
-<h2>Thunderbird installieren<a class="headerlink" href="#thunderbird-installieren" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Thunderbird installieren<a class="headerlink" href="#thunderbird-installieren" title="Link zu dieser Überschrift">¶</a></h3>
 <ul class="simple">
 <li>Laden Sie den neuesten Thunderbird für Ihr Betriebssystem herunter:
 <a class="reference external" href="https://www.thunderbird.net/de/">https://www.thunderbird.net/de/</a> . Linuxbenutzer sollten
@@ -166,7 +178,7 @@ Nachricht</em> unter dem Untermenü -&gt; <em>Existierendes E-Mail-Konto...</em>
 </div>
 </div>
 <div class="section" id="mailkonto-einrichten">
-<h2>Mailkonto einrichten<a class="headerlink" href="#mailkonto-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Mailkonto einrichten<a class="headerlink" href="#mailkonto-einrichten" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Anschließend wird ein neues Konto eingerichtet, dabei geben Sie Name,
 E-Mail-Adresse und Passwort ein. Ersetzen Sie dabei <code class="docutils literal"><span class="pre">za3966</span></code> durch
 Ihr eigenes Benutzerkonto. Wenn Sie das Passwort speichern, sollten
@@ -190,17 +202,39 @@ werden.</p>
 <img alt="../_images/thunderbird-autoconfig.png" src="../_images/thunderbird-autoconfig.png" />
 </div>
 <p>Ab jetzt können Sie Ihre E-Mails über IMAP/Port 993 (zwangsläufig über
-SSL verschlüsselt) lesen.</p>
+SSL verschlüsselt) lesen. Das Senden von E-Mails über SMTP/Port 465
+wird zwangsläufig verschlüsselt und E-Mails werden nur angenommen,
+wenn per Benutzername+Passwort authentifiziert wurde.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hinweis</p>
+<p class="last">Im Gegensatz zu früher kann man nun E-Mails auch ohne Tunnel
+versenden.</p>
 </div>
-<div class="section" id="e-mails-versenden">
-<h2>E-Mails versenden<a class="headerlink" href="#e-mails-versenden" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="admonition attention">
-<p class="first admonition-title">Achtung</p>
-<p class="last">Das Senden von E-Mails über SMTP/Port 465 (zwangsläufig
-verschlüsselt und per Benutzername+Passwort authentifiziert) wird
-zwar gefunden und eingerichtet, funktioniert aber momentan noch
-nicht.</p>
 </div>
+<div class="section" id="korrekte-konfiguration">
+<h3>Korrekte Konfiguration<a class="headerlink" href="#korrekte-konfiguration" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wer sein System bereits konfiguriert hat, kann hier nachschauen, ob
+die richtigen Einstellungen vorhanden sind. Im Menü &#8220;Bearbeiten&#8221;
+finden Sie den Punkt &#8220;Konten-Einstellungen&#8221;, dort findet man dann
+folgende Empfangseinstellungen</p>
+<div class="figure">
+<img alt="../_images/thunderbird-imap-configuration.png" src="../_images/thunderbird-imap-configuration.png" />
+</div>
+<p>Wählt man statt &#8220;Server-Einstellungen&#8221; den Kontonamen aus, dann findet
+sich auch die momentan zugewiesene Versand/SMTP Einstellung.</p>
+<div class="figure">
+<img alt="../_images/thunderbird-smtp-check.png" src="../_images/thunderbird-smtp-check.png" />
+</div>
+<p>Wenn etwas mit dem Versand nicht funktioniert, dann hier auf
+&#8220;Postausgangs-Server (SMTP) bearbeiten&#8221; klicken und man bearbeitet
+gleich die ausgewählte SMTP-Serverkonfiguration.</p>
+<div class="figure">
+<img alt="../_images/thunderbird-smtp-edit.png" src="../_images/thunderbird-smtp-edit.png" />
+</div>
+</div>
+</div>
+<div class="section" id="unter-android-einrichten">
+<h2>Unter Android einrichten<a class="headerlink" href="#unter-android-einrichten" title="Link zu dieser Überschrift">¶</a></h2>
 </div>
 </div>
 
@@ -212,7 +246,7 @@ nicht.</p>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="../index.html" class="btn btn-neutral" title="Dokumentation zum Lehrer-Server" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../benutzerkonto/index.html" class="btn btn-neutral" title="Nutzung des Kontos: Login und Dateitransfer" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
